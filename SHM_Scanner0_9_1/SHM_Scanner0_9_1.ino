@@ -7,12 +7,15 @@ int sensorVal;
 
 void setup()
 {
+  delay(100);
   Serial.begin(9600);
+  delay(100);
 }
 
 void loop()
 {
   CommandManager();
+  delay(10);
 }
 
 long getSerial()
