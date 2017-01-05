@@ -132,12 +132,12 @@ void DigitalWrite()
   if (digitalState == 0)
   {
     Serial.println("Turn OFF!");
-    digitalWrite(pinNumber, 0);
+    digitalWrite(pinNumber, LOW);
   }
-  if (digitalState == 1)
+  if (digitalState >= 1)
   {
     Serial.println("Turn ON!");
-    digitalWrite(pinNumber, 255);
+    digitalWrite(pinNumber, digitalState);
   }
   pinNumber = 0;
 }
